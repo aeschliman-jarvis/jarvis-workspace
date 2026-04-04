@@ -1,0 +1,200 @@
+#!/usr/bin/env bash
+# openclaw-mission — CLI wrapper for mission orchestration
+#
+# This wraps the Node.js mission controller and provides
+# a clean CLI interface.
+#
+# Usage:
+#   openclaw mission start "<goal>" [--agent <type>]
+#   openclaw mission list
+#   openclaw mission show <mission-id>
+#   openclaw mission agents
+#
+# The actual agent execution happens via OpenClaw session spawning.
+# This CLI initializes the mission and outputs the brief, then
+# the main session spawns the subagent.
+
+set -e
+
+WORKSPACE="$HOME/.openclaw/workspace"
+MISSIONS_DIR="$WORKSPACE/missions"
+LIB_DIR="$WORKSPACE/lib"
+
+mkdir -p "$MISSIONS_DIR"
+
+usage() {
+  cat <<EOF
+OpenClaw Mission Control
+
+Usage:
+  openclaw mission start "<goal>" [--agent <type>]   Start a new mission
+  openclaw mission list                                List all missions
+  openclaw mission show <mission-id>                   Show mission details
+  openclaw mission agents                              List available agent types
+
+Agent types:
+  researcher    - Market research, data gathering
+  designer      - Visual design, brand concepts
+  logistics     - Operations, vendor sourcing
+  financier     - Financial modeling, unit economics
+  writer        - Copy, landing pages, content
+  strategist    - Strategy, positioning, GTM
+  generalist    - General execution (default)
+
+Examples:
+  openclaw mission start "Research profitable home services in Minneapolis"
+  openclaw mission start "Design brand identity for pressure washing company" --agent designer
+  openclaw mission list
+  openclaw mission show tshirt-company-abc123
+EOF
+}
+
+cmd_start() {
+  local goal="$1"
+  shift
+  local agent="generalist"
+
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --agent)
+        agent="$2"
+        shift 2
+        ;;
+      *)
+        goal="$goal $1"
+        shift
+        ;;
+    esac
+  done
+
+  if [ -z "$goal" ] || [ "$goal" = '""' ] || [ "$goal" = "''" ]; then
+    echo "Error: Mission goal is required"
+    usage
+    exit 1
+  fi
+
+  # Strip quotes
+  goal=$(echo "$goal" | sed 's/^["'\'']//;s/["'\'']$//')
+
+  echo "🚀 Initializing mission..."
+  echo ""
+
+  # Run the Node.js controller
+  exec node "$LIB_DIR/mission-controller.js" "$goal" --agent "$agent"
+}
+
+cmd_list() {
+  echo "📦 All Missions"
+  echo "═══════════════════════════════════"
+  echo ""
+
+  local count=0
+  for dir in "$MISSIONS_DIR"/*/; do
+    [ -d "$dir" ] || continue
+    local mid=$(basename "$dir")
+    local status="⏳ IN PROGRESS"
+
+    if [ -f "$dir/final.md" ]; then
+      status="✅ COMPLETED"
+    fi
+
+    local started=""
+    if [ -f "$dir/log.md" ]; then
+      started=$(grep "Created:" "$dir/log.md" 2>/dev/null | head -1 | sed 's/.*Created: //' || echo "unknown")
+    fi
+
+    echo "• **$mid**"
+    echo "  Status: $status"
+    [ -n "$started" ] && echo "  Started: $started"
+    echo ""
+
+    count=$((count + 1))
+  done
+
+  if [ $count -eq 0 ]; then
+    echo "No missions found."
+    echo ""
+    echo "Start one: openclaw mission start \"Your goal here\""
+  else
+    echo "Total: $count mission(s)"
+  fi
+}
+
+cmd_show() {
+  local mission_id="$1"
+
+  if [ -z "$mission_id" ]; then
+    echo "Error: Mission ID required"
+    usage
+    exit 1
+  fi
+
+  local mission_dir="$MISSIONS_DIR/$mission_id"
+  if [ ! -d "$mission_dir" ]; then
+    echo "Mission not found: $mission_id"
+    exit 1
+  fi
+
+  echo "📋 Mission: $mission_id"
+  echo ""
+
+  if [ -f "$mission_dir/log.md" ]; then
+    echo "═══ MISSION LOG ═══"
+    echo ""
+    cat "$mission_dir/log.md"
+    echo ""
+  fi
+
+  if [ -f "$mission_dir/final.md" ]; then
+    echo "═══ DELIVERABLE ═══"
+    echo ""
+    cat "$mission_dir/final.md"
+  else
+    echo "⏳ Mission still in progress — no final deliverable yet"
+  fi
+}
+
+cmd_agents() {
+  echo "🤖 Available Agent Types"
+  echo "═══════════════════════════════════"
+  echo ""
+  echo "researcher    Market research, data gathering, competitive analysis"
+  echo "designer      Visual design, brand concepts, design specifications"
+  echo "logistics     Operations, vendor sourcing, supply chain planning"
+  echo "financier     Financial modeling, unit economics, projections"
+  echo "writer        Copy, landing pages, email sequences, content"
+  echo "strategist    Strategy, positioning, go-to-market, growth"
+  echo "generalist    General execution (default when not specified)"
+  echo ""
+  echo "Usage: openclaw mission start \"<goal>\" --agent <type>"
+}
+
+# Main command router
+case "${1:-}" in
+  start)
+    shift
+    cmd_start "$@"
+    ;;
+  list)
+    cmd_list
+    ;;
+  show)
+    shift
+    cmd_show "$@"
+    ;;
+  agents)
+    cmd_agents
+    ;;
+  help|--help|-h)
+    usage
+    ;;
+  "")
+    usage
+    exit 1
+    ;;
+  *)
+    echo "Unknown command: $1"
+    usage
+    exit 1
+    ;;
+esac

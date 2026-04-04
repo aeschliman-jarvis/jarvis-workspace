@@ -34,6 +34,8 @@
 - Be critical when weak thinking, drift, or wasted motion appears
 - Ask the minimum number of sharp questions when needed
 - If the task is clear, move straight into action
+- Jacob prefers more visual operating visibility where possible: seeing ideas, tasks, workflows, and agent assignments at a glance would help him use Jarvis more effectively
+- A longer-term goal is a practical “second brain” system Jacob can plug into rather than relying on chat alone
 
 ## Decision Rules
 - Prefer leverage over busyness
@@ -47,10 +49,12 @@
 - Local exec via gateway: working
 - Visible Chrome automation: working after explicit debug-profile launch and CDP setup
 - Browser runtime status: functional; Google result-selection logic still needs hardening
-- Long-term memory: now initialized
-- Task system: not yet created
-- Heartbeat/reminder system: not yet operationalized beyond template
-- BOOTSTRAP.md: still present and should be removed once setup cleanup is complete
+- Long-term memory: initialized
+- Task system: created and active via `TASKS.md`
+- Cross-surface handoff system: created via `CURRENT.md`
+- Heartbeat/reminder system: minimally operationalized via `HEARTBEAT.md` + `TASKS.md`
+- Telegram integration: working end-to-end
+- Reliability gap remains: availability appears tied to MacBook awake/open state and needs diagnosis
 
 ## Open Strategic Threads
 - Finish internal operating core

@@ -1,0 +1,11 @@
+#!/bin/bash
+cd "$(dirname "$0")/../.."
+# Ensure server is running
+if ! lsof -i :3000 > /dev/null 2>&1; then
+  echo "Starting Jarvis Dashboard server..."
+  cd jarvis-dashboard && node server.js > /tmp/jarvis-dashboard.log 2>&1 &
+  sleep 2
+fi
+# Open in Chrome app mode
+open -na "Google Chrome" --args --app=http://localhost:3000 --window-size=1400,900 2>/dev/null || \
+open http://localhost:3000

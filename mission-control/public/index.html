@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mission Control</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<div class="app-shell">
+  <!-- GOD VIEW HEADER -->
+  <header class="god-view" id="god-view">
+    <div class="god-brand">
+      <span class="brand-icon">◉</span>
+      <span class="brand-title">Mission Control</span>
+    </div>
+    <div class="god-telemetry">
+      <div class="telemetry-item">
+        <span class="telemetry-label">Gateway</span>
+        <span class="telemetry-value" id="gw-latency">—</span>
+      </div>
+      <div class="telemetry-item">
+        <span class="telemetry-label">Agents</span>
+        <span class="telemetry-value" id="agent-count">0</span>
+      </div>
+      <div class="telemetry-item">
+        <span class="telemetry-label">Active</span>
+        <span class="telemetry-value" id="active-missions">0</span>
+      </div>
+      <div class="telemetry-item">
+        <span class="telemetry-label">Completed</span>
+        <span class="telemetry-value" id="completed-missions">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-stage">
+    <!-- LEFT: Mission List -->
+    <section class="mission-list-panel">
+      <div class="panel-header">
+        <h2>Missions</h2>
+        <button id="new-mission-btn" class="btn-primary">+ New Mission</button>
+      </div>
+      <div id="mission-list" class="mission-list">
+        <div class="loading">Loading missions…</div>
+      </div>
+    </section>
+
+    <!-- RIGHT: Mission Detail / Chat Sidebar -->
+    <aside class="mission-detail-panel">
+      <div id="mission-detail" class="mission-detail">
+        <div class="detail-empty">
+          <p>Select a mission to view details</p>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- NEW MISSION MODAL -->
+  <div id="new-mission-modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Start New Mission</h2>
+        <button id="close-modal" class="btn-close">×</button>
+      </div>
+      <form id="new-mission-form">
+        <div class="form-group">
+          <label for="mission-goal">Mission Goal</label>
+          <textarea id="mission-goal" rows="3" required placeholder="e.g., Research profitable home services in Minneapolis"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="mission-agent">Agent Type</label>
+          <select id="mission-agent">
+            <option value="researcher">🔍 Researcher</option>
+            <option value="designer">🎨 Designer</option>
+            <option value="logistics">📦 Logistics</option>
+            <option value="financier">💰 Financier</option>
+            <option value="writer">✍️ Writer</option>
+            <option value="strategist">♟️ Strategist</option>
+            <option value="generalist" selected>⚙️ Generalist</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button type="button" id="cancel-mission" class="btn-secondary">Cancel</button>
+          <button type="submit" class="btn-primary">Launch Mission</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

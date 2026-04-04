@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jarvis Command Center</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="single-screen-shell">
+    <header class="hud-topbar">
+      <div>
+        <div class="hud-title">Jarvis</div>
+        <div class="hud-subtitle" id="view-subtitle">Local command center • simple on the surface, deep underneath</div>
+      </div>
+      <div class="hud-actions">
+        <div class="hud-sync" id="last-sync">Waiting for data…</div>
+        <button id="refresh-btn" class="hud-button">Refresh</button>
+      </div>
+    </header>
+
+    <main class="chat-stage">
+      <section class="focus-strip">
+        <div class="focus-label">Current Focus</div>
+        <div class="focus-text" id="current-focus">Loading…</div>
+        <div class="execution-strip" id="execution-strip">SYNCING STATE…</div>
+      </section>
+
+      <section class="main-chat-panel">
+        <div class="chat-glow chat-glow-a"></div>
+        <div class="chat-glow chat-glow-b"></div>
+
+        <div class="chat-panel-header">
+          <div>
+            <div class="chat-header-title">Jarvis</div>
+            <div class="chat-header-subtitle">Operational interface</div>
+          </div>
+          <div class="chat-status-pill" id="chat-mode-pill">LIVE STATE</div>
+        </div>
+
+        <div class="prompt-chips" id="prompt-chips">
+          <button class="prompt-chip" data-prompt="what is my current focus">Current Focus</button>
+          <button class="prompt-chip" data-prompt="what are my top next tasks">Next Tasks</button>
+          <button class="prompt-chip" data-prompt="what am i waiting on">Waiting</button>
+          <button class="prompt-chip" data-prompt="what changed today">What Changed Today</button>
+          <button class="prompt-chip" data-prompt="summarize my state">State Summary</button>
+        </div>
+
+        <div id="chat-log" class="chat-log fullscreen-chat"></div>
+
+        <form id="chat-form" class="chat-form futuristic-chat-form">
+          <input id="chat-input" class="chat-input futuristic-input" type="text" placeholder="Talk to Jarvis…" autocomplete="off" />
+          <button class="hud-button primary" type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="orb-dock">
+      <button class="orb active" data-mode="chat">
+        <span class="orb-core"></span>
+        <span class="orb-label">Chat</span>
+      </button>
+      <button class="orb" data-mode="projects">
+        <span class="orb-core"></span>
+        <span class="orb-label">Projects</span>
+      </button>
+      <button class="orb" data-mode="workflows">
+        <span class="orb-core"></span>
+        <span class="orb-label">Workflows</span>
+      </button>
+      <button class="orb" data-mode="brain">
+        <span class="orb-core"></span>
+        <span class="orb-label">Second Brain</span>
+      </button>
+      <button class="orb" data-mode="state">
+        <span class="orb-core"></span>
+        <span class="orb-label">State</span>
+      </button>
+      <button class="orb" data-mode="activity">
+        <span class="orb-core"></span>
+        <span class="orb-label">Activity</span>
+      </button>
+      <button class="orb" data-mode="missions">
+        <span class="orb-core"></span>
+        <span class="orb-label">Missions</span>
+      </button>
+    </footer>
+
+    <section class="orb-overlay" id="orb-overlay">
+      <div class="overlay-card">
+        <div class="overlay-header">
+          <div>
+            <div class="overlay-title" id="overlay-title">Projects</div>
+            <div class="overlay-subtitle" id="overlay-subtitle">Quick view</div>
+          </div>
+          <button id="close-overlay" class="hud-button">Close</button>
+        </div>
+        <div id="overlay-content" class="overlay-content"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "inbox": [
+    {
+      "id": "mnkrkuqiepsu",
+      "text": "queue test v2",
+      "timestamp": "2026-04-04T20:07:29.946Z",
+      "status": "error",
+      "error": "Command failed: openclaw sessions send --session main --message \"queue test v2\" 2>&1"
+    },
+    {
+      "id": "mnkrm4gst29p",
+      "text": "hello from dashboard test",
+      "timestamp": "2026-04-04T20:08:29.212Z",
+      "status": "sent",
+      "sentAt": "2026-04-04T20:08:32.244Z"
+    }
+  ],
+  "outbox": [
+    {
+      "requestId": "mnkrkuqiepsu",
+      "reply": "Error sending to Jarvis: Command failed: openclaw sessions send --session main --message \"queue test v2\" 2>&1",
+      "timestamp": "2026-04-04T20:07:50.844Z",
+      "isError": true
+    },
+    {
+      "requestId": "mnkrm4gst29p",
+      "reply": "Hey Jacob — dashboard chat bridge is working. Here is the current state:\n\n- Mission Control: Live at http://localhost:3000 with Missions orb\n- Active Missions: 1 completed (home improvement research in MN)\n- System Status: All tracking files synced\n- Desktop App: OPEN MISSION CONTROL.command on your Desktop\n\nWhat can I help with?",
+      "timestamp": "2026-04-04T20:09:32.415Z"
+    }
+  ],
+  "lastPoll": null
+}

@@ -1,0 +1,186 @@
+[
+  {
+    "role": "user",
+    "text": "what is my current focus",
+    "ts": "2026-04-02T18:08:52.060Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Received. Live Jarvis bridge failed, so this is the local fallback responder.",
+    "ts": "2026-04-02T18:08:58.133Z",
+    "live": false
+  },
+  {
+    "role": "user",
+    "text": "what is my current focus",
+    "ts": "2026-04-02T18:10:18.241Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Received. Live Jarvis bridge failed, so this is the local fallback responder.",
+    "ts": "2026-04-02T18:10:34.393Z",
+    "live": false
+  },
+  {
+    "role": "user",
+    "text": "what is my current focus",
+    "ts": "2026-04-02T18:13:30.381Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Current focus: Shift from raw capability testing into learning how to use Jarvis as an operating system: continuity, workflows, delegation, reminders, and real operating patterns..",
+    "ts": "2026-04-02T18:13:30.387Z",
+    "live": true
+  },
+  {
+    "role": "user",
+    "text": "hello",
+    "ts": "2026-04-02T18:15:00.472Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Received. I can already answer from live Jarvis state here. For full parity with the main runtime, the next architecture step is a dedicated dashboard-owned agent session instead of the locked main lane.",
+    "ts": "2026-04-02T18:15:00.476Z",
+    "live": true
+  },
+  {
+    "role": "user",
+    "text": "hello",
+    "ts": "2026-04-02T18:18:47.594Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Received. I can already answer from live Jarvis state here. For full parity with the main runtime, the next architecture step is a dedicated dashboard-owned agent session instead of the locked main lane.",
+    "ts": "2026-04-02T18:18:47.596Z",
+    "live": true
+  },
+  {
+    "role": "user",
+    "text": "Hello Jarvis",
+    "ts": "2026-04-02T18:23:04.484Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Received. I can already answer from live Jarvis state here. For full parity with the main runtime, the next architecture step is a dedicated dashboard-owned agent session instead of the locked main lane.",
+    "ts": "2026-04-02T18:23:04.487Z",
+    "live": true
+  },
+  {
+    "role": "user",
+    "text": "okay, how capable are you as an agent from here?",
+    "ts": "2026-04-02T18:23:25.634Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Received. I can already answer from live Jarvis state here. For full parity with the main runtime, the next architecture step is a dedicated dashboard-owned agent session instead of the locked main lane.",
+    "ts": "2026-04-02T18:23:25.638Z",
+    "live": true
+  },
+  {
+    "role": "user",
+    "text": "?",
+    "ts": "2026-04-02T18:23:32.086Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Received. I can already answer from live Jarvis state here. For full parity with the main runtime, the next architecture step is a dedicated dashboard-owned agent session instead of the locked main lane.",
+    "ts": "2026-04-02T18:23:32.087Z",
+    "live": true
+  },
+  {
+    "role": "user",
+    "text": "hello",
+    "ts": "2026-04-02T18:24:45.816Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Received. I can already answer from live Jarvis state here. For full parity with the main runtime, the next architecture step is a dedicated dashboard-owned agent session instead of the locked main lane.",
+    "ts": "2026-04-02T18:24:45.818Z",
+    "live": true
+  },
+  {
+    "role": "user",
+    "text": "what is my current focus",
+    "ts": "2026-04-02T18:24:48.352Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Current focus: Shift from raw capability testing into learning how to use Jarvis as an operating system: continuity, workflows, delegation, reminders, and real operating patterns..",
+    "ts": "2026-04-02T18:24:48.353Z",
+    "live": true
+  },
+  {
+    "role": "user",
+    "text": "what are my top next tasks",
+    "ts": "2026-04-02T18:24:50.888Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Top next items: • Follow up at 11:00 AM with Shawn & Tracy Jones about collecting the check • Follow up at 11:00 AM with Giles & Laura Lovejoy about the revised quote and whether they want to move forward • Continue capability-learning in plain English: how Jarvis, tasks, memory, heartbeat, reminders, and spawned agents should work together • Turn the continuity process into standard operating behavior rather than chat-only guidance • Define the first repeatable Jarvis workflow for business/life ops",
+    "ts": "2026-04-02T18:24:50.891Z",
+    "live": true
+  },
+  {
+    "role": "user",
+    "text": "what are my top next tasks",
+    "ts": "2026-04-02T18:34:35.139Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Top next items: • Follow up at 11:00 AM with Shawn & Tracy Jones about collecting the check • Follow up at 11:00 AM with Giles & Laura Lovejoy about the revised quote and whether they want to move forward • Continue capability-learning in plain English: how Jarvis, tasks, memory, heartbeat, reminders, and spawned agents should work together • Turn the continuity process into standard operating behavior rather than chat-only guidance • Define the first repeatable Jarvis workflow for business/life ops",
+    "ts": "2026-04-02T18:34:35.139Z",
+    "live": true
+  },
+  {
+    "role": "user",
+    "text": "hello",
+    "ts": "2026-04-02T18:34:35.140Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Received. I can already answer from live Jarvis state here. For full parity with the main runtime, the next architecture step is a dedicated dashboard-owned agent session instead of the locked main lane.",
+    "ts": "2026-04-02T18:34:35.141Z",
+    "live": true
+  },
+  {
+    "role": "user",
+    "text": "hello",
+    "ts": "2026-04-02T19:01:43.037Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Received. I can already answer from live Jarvis state here. For full parity with the main runtime, the next architecture step is a dedicated dashboard-owned agent session instead of the locked main lane.",
+    "ts": "2026-04-02T19:01:43.038Z",
+    "live": true
+  },
+  {
+    "role": "user",
+    "text": "test message",
+    "ts": "2026-04-04T20:06:00.740Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Focus: Shift from raw capability testing into learning how to use Jarvis as an operating system: continuity, workflows, delegation, reminders, and real operating patterns..\nNext: Follow up at 11:00 AM with Shawn & Tracy Jones about collecting the check | Follow up at 11:00 AM with Giles & Laura Lovejoy about the revised quote and whether they want to move forward | Continue capability-learning in plain English: how Jarvis, tasks, memory, heartbeat, reminders, and spawned agents should work together.\nWaiting: Outlook calendar native integration may require company approval/admin consent | Google Gmail/Drive API setup awaits final OAuth token authorization.\nScheduled: Daily operating review reminder active: every day at 9:00 AM America/Chicago | 11:00 AM today: follow up with Shawn & Tracy Jones about collecting the check.\nTrust flags: Scheduled tasks reference \"11:00 AM today\" — likely stale/overdue.",
+    "ts": "2026-04-04T20:06:00.746Z"
+  },
+  {
+    "role": "user",
+    "text": "hello from dashboard",
+    "ts": "2026-04-04T20:06:22.073Z"
+  },
+  {
+    "role": "assistant",
+    "text": "I'm here. Current focus: Shift from raw capability testing into learning how to use Jarvis as an operating system: continuity, workflows, delegation, reminders, and real operating patterns.. I can execute commands, spawn agents, manage tasks, and answer state queries.",
+    "ts": "2026-04-04T20:06:22.075Z"
+  },
+  {
+    "role": "user",
+    "text": "test queue bridge",
+    "ts": "2026-04-04T20:06:51.731Z"
+  },
+  {
+    "role": "assistant",
+    "text": "Focus: Shift from raw capability testing into learning how to use Jarvis as an operating system: continuity, workflows, delegation, reminders, and real operating patterns..\nNext: Follow up at 11:00 AM with Shawn & Tracy Jones about collecting the check | Follow up at 11:00 AM with Giles & Laura Lovejoy about the revised quote and whether they want to move forward | Continue capability-learning in plain English: how Jarvis, tasks, memory, heartbeat, reminders, and spawned agents should work together.\nWaiting: Outlook calendar native integration may require company approval/admin consent | Google Gmail/Drive API setup awaits final OAuth token authorization.\nScheduled: Daily operating review reminder active: every day at 9:00 AM America/Chicago | 11:00 AM today: follow up with Shawn & Tracy Jones about collecting the check.\nTrust flags: Scheduled tasks reference \"11:00 AM today\" — likely stale/overdue.",
+    "ts": "2026-04-04T20:06:51.734Z"
+  }
+]
