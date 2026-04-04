@@ -26,3 +26,4 @@ Thumbs.db
 
 # OpenClaw specific (keep configs, hide transient state if needed)
 # Note: We are intentionally tracking TASKS.md, CURRENT.md, and MEMORY.md
+node_modules/
