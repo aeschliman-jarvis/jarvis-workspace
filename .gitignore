@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+.next/
+out/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Sensitive Data
+.env
+.env.local
+*.pem
+*.key
+
+# OpenClaw specific (keep configs, hide transient state if needed)
+# Note: We are intentionally tracking TASKS.md, CURRENT.md, and MEMORY.md
