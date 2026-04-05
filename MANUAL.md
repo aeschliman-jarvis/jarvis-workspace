@@ -112,7 +112,13 @@ This document is the "Source of Truth" for the Jarvis Operating System. If the s
     *   `search_local_web.py --query "Current best local LLM" --intent research`
     *   `verify_claim.py --claim "Claude 4 was released in 2025" --sources 5`
 
-### Skill 8: The "Arc" Memory System (Session & Context Management)
+### Skill 11: The Self-Healing Git Guardian
+**Purpose:** To automatically detect and repair syntax errors or broken scripts in the workspace.
+**How to Rebuild:**
+1.  **The Tool:** `lib/self-healing-guardian.sh`
+2.  **The Logic:** Runs `node -c` and `bash -n` on all workspace files to find syntax errors.
+3.  **The Fix:** If an error is found, it creates a new `fix/` branch and sends the error log to the OpenClaw agent to generate a code patch.
+4.  **The Automation:** Add to cron: `*/30 * * * * $HOME/.openclaw/workspace/lib/self-healing-guardian.sh`
 **Purpose:** To prevent the AI from "losing the thread" during long autonomous sessions.
 **How to Implement:**
 1.  **Tools:** `arc-agent-lifecycle` and `arc-memory-pruner` (Community skills).
@@ -196,3 +202,12 @@ This document is the "Source of Truth" for the Jarvis Operating System. If the s
 5.  **Voice & Multimodal:**
     *   **OpenVoice:** MIT & MyShell's instant voice cloning tech. Local-friendly and natively multi-lingual.
     *   **`openai-whisper` Skill:** Built into OpenClaw for local, offline Speech-to-Text. No API key needed. Works by capturing macOS system audio or microphone input and piping it to a local Whisper.cpp instance.
+
+### 🕵️ Skill Hunt Report (Sat Apr  4 18:37:58 CDT 2026)
+**GitHub Finds:**
+- **elevenlabs-twilio-memory-bridge**: Lightweight personalization webhook for ElevenLabs + Twilio voice agents with persistent caller memo... [Link](https://github.com/britrik/elevenlabs-twilio-memory-bridge)
+- **Enso**: An AI sandbox where every user owns the factory. One-command setup personalizes the entire app — Cla... [Link](https://github.com/Proxy2021/Enso)
+
+**Reddit Breakthroughs:**
+- Reddit search failed.
+
