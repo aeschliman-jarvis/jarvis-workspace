@@ -211,3 +211,12 @@ This document is the "Source of Truth" for the Jarvis Operating System. If the s
 **Reddit Breakthroughs:**
 - Reddit search failed.
 
+
+### 🕵️ Skill Hunt Report (Sun Apr  5 12:00:01 CDT 2026)
+**GitHub Finds:**
+- **Awesome-OpenClaw-Research**: A curated collection of 54+ academic papers, security reports, datasets, and tools for the OpenClaw ... [Link](https://github.com/REAL-Lab-NU/Awesome-OpenClaw-Research)
+- **openclaw-skills**: OpenClaw agent skills collection... [Link](https://github.com/ricanwarfare/openclaw-skills)
+
+**Reddit Breakthroughs:**
+- Reddit search failed.
+
