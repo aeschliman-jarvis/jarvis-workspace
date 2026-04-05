@@ -6,7 +6,8 @@ On heartbeat:
 2. Review `CURRENT.md` if needed for current-state drift.
 3. Review today's daily memory file only if needed for context.
 4. **Run Self-Healing Scan:** Execute `lib/self-healing-guardian.sh` to check for code rot.
-5. **Check dashboard inbox:** If `~/.openclaw/workspace/jarvis-dashboard/INBOX.md` has new messages, read and reply to them by writing to `OUTBOX.md`.
+5. **Run PCEC Evolution:** If it's been 24 hours, execute `lib/pcec-evolution-loop.sh` for self-improvement.
+6. **Check dashboard inbox:** If `~/.openclaw/workspace/jarvis-dashboard/INBOX.md` has new messages, read and reply to them by writing to `OUTBOX.md`.
 5. Check for any of the following:
    - a high-priority item in `Next` that appears stalled
    - any item in `Waiting` that likely needs follow-up
